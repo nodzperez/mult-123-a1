@@ -1,0 +1,130 @@
+/* font for a retro calculator feel */
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #1a0014;
+}
+
+.button-grid {
+  display: grid;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding-bottom: 3px;
+}
+
+.middle-rows {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding-top: 3px;
+}
+
+.button-body {
+  /* layout */
+  display: flex;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+
+  padding-top: 2px;
+
+  /* style */
+  background: linear-gradient(145deg, rgb(120, 118, 99), #fff9d6);
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
+    0 0px 1px rgba(16, 22, 26, 0.2);
+
+  /* effects */
+  &:active {
+    transform: scale(0.95);
+    background: linear-gradient(145deg, rgb(120, 118, 99), #fff9d6);
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
+      0 0px 1px rgba(16, 22, 26, 0.2);
+  }
+}
+
+.button-cap {
+  /* layout */
+  width: 65px;
+  height: 65px;
+  border-radius: 5px;
+
+  /* style */
+  border: none;
+  background: linear-gradient(145deg, #d6d2b4, #fff9d6);
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
+    0 0px 1px rgba(16, 22, 26, 0.2);
+
+  /* typography */
+  font-family: "Audiowide", cursive;
+  color: black;
+  font-size: larger;
+
+  /* effects */
+  &:active {
+    transform: scale(0.95);
+    background: linear-gradient(145deg, #d6d2b4, #fff9d6);
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
+      0 0px 1px rgba(16, 22, 26, 0.2);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button-blue {
+  background: linear-gradient(145deg, rgb(110, 131, 129), #d6fff9);
+
+  /* effects */
+  &:active {
+    transform: scale(0.95);
+    background: linear-gradient(145deg, rgb(110, 131, 129), #d6fff9);
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
+      0 0px 1px rgba(16, 22, 26, 0.2);
+  }
+}
+
+.blue-cap-blue {
+  background: linear-gradient(145deg, #b4d6d2, #d6fff9);
+
+  &:active {
+    transform: scale(0.95);
+    background: linear-gradient(145deg, #b4d6d2, #d6fff9);
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
+      0 0px 1px rgba(16, 22, 26, 0.2);
+  }
+}
+
+/* assigned buttons will occupy 2frs */
+.wider-button {
+  width: 50%;
+}
+
+.wider-cap {
+  width: 90%;
+}

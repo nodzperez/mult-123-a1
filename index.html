@@ -1,43 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Number API</title>
   <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
-
 <body>
-  <header>
-    <h1>Number Facts & More!</h1>
-    <p>Discover interesting facts about your favorite numbers, years, and dates!</p>
-  </header>
+  <main class="container">
+    <div class="button-grid">
 
-  <main>
-    <section id="fact-section">
-      <label for="number-input">Enter a Number:</label>
-      <input type="number" id="number-input" placeholder="e.g., 69">
+      <!-- top row buttons -->
+      <div class="top-row">
+        <div class="button-body button-blue">
+          <button class="button-cap blue-cap-blue">C</button>
+        </div>
+  
+       <div class="button-body button-blue wider-button">
+          <button class="button-cap blue-cap-blue wider-cap">Random</button>
+        </div>
+  
+       <div class="button-body button-blue">
+          <button class="button-cap blue-cap-blue">Date</button>
+        </div>
+      </div>
 
-      <label for="fact-type">Select Fact Type:</label>
-      <select id="fact-type">
-        <option value="trivia">Trivia</option>
-        <option value="math">Math</option>
-        <option value="date">Date</option>
-        <option value="year">Year</option>
-      </select>
+      <!-- middle row buttons -->
+      <div class="middle-rows">
+        <div class="button-body">
+          <button class="button-cap">7</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">8</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">9</button>
+        </div>
+  
+        <div class="button-body button-blue">
+          <button class="button-cap blue-cap-blue">Year</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">4</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">5</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">6</button>
+        </div>
+  
+       <div class="button-body button-blue">
+          <button class="button-cap blue-cap-blue">Math</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">1</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">2</button>
+        </div>
+  
+        <div class="button-body">
+          <button class="button-cap">3</button>
+        </div>
+  
+       <div class="button-body button-blue">
+          <button class="button-cap blue-cap-blue">Trivia</button>
+       </div>
+      </div>
 
-      <button id="get-fact">Get Fact</button>
-      <button id="random-fact">Random Fact</button>
-    </section>
+      <!-- bottom row buttons -->
+      <div class="bottom-row">
+        <div class="button-body wider-button">
+          <button class="button-cap wider-cap">0</button>
+        </div>
 
-    <section id="display-section">
-      <h2>Your Fact:</h2>
-      <p id="fact-output">Enter a number and hit the button to get a fun fact!</p>
-    </section>
+        <div class="button-body wider-button">
+          <button class="button-cap wider-cap">Get Fact</button>
+        </div>
+      </div>
   </main>
-
-  <script src="script.js"></script>
 </body>
-
 </html>
