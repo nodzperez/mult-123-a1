@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+
 <body>
   <main class="container">
+    <header class="main-header">
+      <h1>W3LC0M3 2 NUMB3R F4CT5</h1>
+      <p class="tagline">Your daily dose of quirky but informative number trivias!</p>
+    </header>
+
     <!-- calculator screen -->
     <input class="display" readonly type="text" dir="rtl" maxlength="8" placeholder="69420" />
 
@@ -19,12 +26,12 @@
         <div class="button-body button-blue">
           <button class="button-cap blue-cap-blue">C</button>
         </div>
-  
-       <div class="button-body button-blue wider-button">
+
+        <div class="button-body button-blue wider-button">
           <button class="button-cap blue-cap-blue wider-cap">Random</button>
         </div>
-  
-       <div class="button-body button-blue">
+
+        <div class="button-body button-blue">
           <button class="button-cap blue-cap-blue">Date</button>
         </div>
       </div>
@@ -34,50 +41,50 @@
         <div class="button-body">
           <button class="button-cap">7</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">8</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">9</button>
         </div>
-  
+
         <div class="button-body button-blue">
           <button class="button-cap blue-cap-blue">Year</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">4</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">5</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">6</button>
         </div>
-  
-       <div class="button-body button-blue">
+
+        <div class="button-body button-blue">
           <button class="button-cap blue-cap-blue">Math</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">1</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">2</button>
         </div>
-  
+
         <div class="button-body">
           <button class="button-cap">3</button>
         </div>
-  
-       <div class="button-body button-blue">
+
+        <div class="button-body button-blue">
           <button class="button-cap blue-cap-blue">Trivia</button>
-       </div>
+        </div>
       </div>
 
       <!-- bottom row buttons -->
@@ -90,6 +97,13 @@
           <button class="button-cap wider-cap">Get Fact</button>
         </div>
       </div>
+
+      <!-- Fact display section -->
+      <section class="fact-display">
+        <h2>Your Fact:</h2>
+        <p id="fact-output">Press "Get Fact" to reveal something fun!</p>
+      </section>
   </main>
 </body>
+
 </html>
