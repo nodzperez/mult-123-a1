@@ -9,7 +9,8 @@ let selectedType = 'trivia';
 
 // make a function to update the screen 
 function updateScreen(value) {
-  display.value = value || '0'; //0 will be displayed if it is empty except for the first value (placeholder)
+  currentNumber = value.slice(0, 8); // limit the length of currentNumber to 9 digits
+  display.value = currentNumber;
 }
 
 // make a function to update the fact type
@@ -36,25 +37,25 @@ buttonGrid.addEventListener('click', (event) => {
   }
 
   // button click event listener for the fact type buttons
-  if (target.classList.contains('blue-cap-blue')) {
+  if (target.classList.contains('blue-cap-blue') || target.classList.contains('yellow-cap-yellow') || target.classList.contains('red-cap-red')) {
     if (target.textContent === 'Random') {
-      fetchFact('random', ''); // fetches a random fact
-    } else if (target.textContent === 'C') {
+      const factTypes = ['trivia', 'math', 'date', 'year'];
+      const randomType = factTypes[Math.floor(Math.random() * factTypes.length)];
+      fetchFact('random', randomType); // fetches a random fact
+      return;
+    } else if (target.textContent === 'C') { // button click event listener for the clear button
       currentNumber = ''; 
       selectedType = 'trivia'; 
-      updateScreen('0');
+      updateScreen('');
       factOutput.textContent = 'Press "Get Fact" to reveal something fun!';
       updateFactTypeDisplay(selectedType);
+    } else if (target.textContent === 'Del') { // button click event listener for the delete button
+      currentNumber = currentNumber.slice(0, -1);
+      updateScreen(currentNumber);
     } else {
       selectedType = target.textContent.toLowerCase(); 
       updateFactTypeDisplay(selectedType);
     }
-  }
-
-  // button click event listener for the delete button
-  if (target.textContent === 'Del') {
-    currentNumber = currentNumber.slice(0, -1);
-    updateScreen(currentNumber);
   }
 
   // button click event listener for the get fact button
@@ -70,7 +71,15 @@ buttonGrid.addEventListener('click', (event) => {
 // function to fetch a fact from the api
 async function fetchFact(number, type) {
   try {
-    const response = await fetch(`http://numbersapi.com/${number}/${type}`);
+    let url = ''
+
+    if (number === 'random') {
+      url = `http://numbersapi.com/random/${type}`;
+    } else {
+      url = `http://numbersapi.com/${number}/${type}`;
+    }
+
+    const response = await fetch(url);
     const fact = await response.text(); 
     factOutput.textContent = fact;
   } catch (error) {

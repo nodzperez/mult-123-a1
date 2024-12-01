@@ -204,6 +204,27 @@ body {
   background: linear-gradient(145deg, #b4d6d2, #d6fff9);
 }
 
+.button-green {
+  background: linear-gradient(145deg, rgb(110, 131, 116), #d6ffd6)
+}
+.green-cap-green {
+  background: linear-gradient(145deg, #b6d6b4, #d6ffd6);
+}
+
+.button-red {
+  background: linear-gradient(145deg, rgb(131, 110, 110), #ff9b9b)
+}
+.red-cap-red {
+  background: linear-gradient(145deg, #d47676, #ff9b9b);
+}
+
+.button-yellow {
+  background: linear-gradient(145deg, rgb(135, 132, 85), #faff9b)
+}
+.yellow-cap-yellow {
+  background: linear-gradient(145deg, #d2d561, #f6ff79);
+}
+
 .wider-button {
   width: 50%;
 }
