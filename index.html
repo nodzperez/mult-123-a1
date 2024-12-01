@@ -14,9 +14,13 @@
       <h1>W3LC0M3 2 NUMB3R F4CT5</h1>
       <p class="tagline">Your daily dose of quirky but informative number trivias!</p>
     </header>
+    
+    <!-- fact type indicator -->
+    <div class="fact-type-display">Selected Fact Type: <span id="fact-type">Trivia</span></div>
 
     <!-- calculator screen -->
     <input class="display" readonly type="text" dir="rtl" maxlength="8" placeholder="69420" />
+
 
     <!-- calculator buttons -->
     <div class="button-grid">
@@ -86,24 +90,27 @@
           <button class="button-cap blue-cap-blue">Trivia</button>
         </div>
       </div>
-
-      <!-- bottom row buttons -->
-      <div class="bottom-row">
-        <div class="button-body wider-button">
-          <button class="button-cap wider-cap">0</button>
-        </div>
-
-        <div class="button-body wider-button">
-          <button class="button-cap wider-cap">Get Fact</button>
-        </div>
+    
+    <div class="bottom-row">
+      <div class="button-body">
+        <button class="button-cap">Del</button>
       </div>
 
-      <!-- Fact display section -->
+      <div class="button-body">
+        <button class="button-cap">0</button>
+      </div>
+
+      <div class="button-body wider-button">
+        <button class="button-cap wider-cap">Get Fact</button>
+    </div>
+  </div>
+
+      <!-- fact display section -->
       <section class="fact-display">
         <h2>Your Fact:</h2>
         <p id="fact-output">Press "Get Fact" to reveal something fun!</p>
       </section>
   </main>
 </body>
-
+<script src="script.js"></script>
 </html>
