@@ -1,37 +1,42 @@
 /* font for a retro calculator feel */
 @import url(https://fonts.googleapis.com/css?family=Audiowide);
 
-/* global styling*/
+/* global styling */
+:root {
+  --button-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2), 0 0px 1px rgba(16, 22, 26, 0.2);
+}
+
 * {
-  box-sizing: border-box;
+  font-family: "Audiowide", cursive;
 }
 
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background: #1a0014;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
   background: #1a0014;
-  gap: 15px;
 }
 
 /* Header styles */
 .main-header {
   text-align: center;
-  font-family: "Audiowide";
   margin-bottom: 20px;
 }
 
 .main-header h1 {
   font-size: 2.5rem;
-  color: #ffd700; /* Gold color for emphasis */
+  color: #ffd700; /* Gold for emphasis */
   text-shadow: 2px 2px #000;
 }
 
@@ -41,13 +46,51 @@ body {
   margin-top: -10px;
 }
 
-/* fact ytpe indicator style*/
+
+/* instructions section styling */
+.instructions-panel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.instructions {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.instructions h2 {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 25px;
+  list-style-type: disc;
+}
+.instructions ul li {
+  margin-bottom: 10px;
+}
+
+.instructions strong {
+  color: #ffd700;
+}
+
+/* fact type indicator */
 .fact-type-display {
   margin-top: 10px;
-  font-family: "Audiowide", cursive;
-  font-size: 1rem;
-  color: #ffd700; 
+  font-size: 1.5rem;
+  color: #ffd700;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 #fact-type {
@@ -63,30 +106,40 @@ body {
   }
 }
 
-/* screen styling */
+/* calculator case styling */
+.calculator-case {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 15px;
+  background: #d6d2b4;
+  box-shadow: inset 5px 5px 18px #c7c3a7, inset -5px -5px 18px #e5e1c1;
+}
+
+/* Screen styling */
 .display {
-  /* layout */
-  overflow: hidden;
   padding: 5px;
   height: 75px;
   width: 310px;
-
-  /* style */
   background: rgba(56, 62, 37, 1);
   box-shadow: inset 1px 1px 6px 0px #050505, 0px 0px 4px 2px #000,
     0px 0px 4px 2px #777;
-
-  /* typography */
   color: black;
   font-size: 3rem;
-  font-family: "Audiowide", cursive;
   text-align: right;
-  padding-right: 10px; 
+  padding-right: 10px;
 }
 
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
 
-
-/* button styling */
+/* button grid styling */
 .button-grid {
   display: flex;
   flex-direction: column;
@@ -113,82 +166,44 @@ body {
 }
 
 .button-body {
-  /* layout */
   display: flex;
   justify-content: center;
   width: 75px;
   height: 75px;
   padding-top: 2px;
-
-  /* style */
   background: linear-gradient(145deg, rgb(120, 118, 99), #fff9d6);
   border-radius: 3px;
-  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
-    0 0px 1px rgba(16, 22, 26, 0.2);
+  box-shadow: var(--button-shadow);
+}
 
-  /* effects */
-  &:active {
-    transform: scale(0.95);
-    background: linear-gradient(145deg, rgb(120, 118, 99), #fff9d6);
-    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
-      0 0px 1px rgba(16, 22, 26, 0.2);
-  }
+.button-body:active {
+  transform: scale(0.95);
 }
 
 .button-cap {
-  /* layout */
   width: 65px;
   height: 65px;
   border-radius: 5px;
-
-  /* style */
   border: none;
   background: linear-gradient(145deg, #d6d2b4, #fff9d6);
-  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
-    0 0px 1px rgba(16, 22, 26, 0.2);
-
-  /* typography */
-  font-family: "Audiowide", cursive;
+  box-shadow: var(--button-shadow);
   color: black;
   font-size: larger;
-
-  /* effects */
-  &:active {
-    transform: scale(0.95);
-    background: linear-gradient(145deg, #d6d2b4, #fff9d6);
-    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
-      0 0px 1px rgba(16, 22, 26, 0.2);
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
+.button-cap:hover {
+  cursor: pointer;
+}
+
+/* for the buttons with different colors */
 .button-blue {
   background: linear-gradient(145deg, rgb(110, 131, 129), #d6fff9);
-
-  /* effects */
-  &:active {
-    transform: scale(0.95);
-    background: linear-gradient(145deg, rgb(110, 131, 129), #d6fff9);
-    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
-      0 0px 1px rgba(16, 22, 26, 0.2);
-  }
 }
 
 .blue-cap-blue {
   background: linear-gradient(145deg, #b4d6d2, #d6fff9);
-
-  &:active {
-    transform: scale(0.95);
-    background: linear-gradient(145deg, #b4d6d2, #d6fff9);
-    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2),
-      0 0px 1px rgba(16, 22, 26, 0.2);
-  }
 }
 
-/* assigned buttons will occupy 2frs */
 .wider-button {
   width: 50%;
 }
@@ -197,27 +212,33 @@ body {
   width: 90%;
 }
 
-/* Fact display section */
+/* right panel*/
+.right-panel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  padding: 20px;
+}
+
 .fact-display {
   background: #222;
   color: #fff;
-  padding: 15px;
-  margin-top: 20px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  width: 320px;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.8;
   text-align: center;
 }
 
 .fact-display h2 {
-  font-family: "Audiowide", cursive;
   color: #ffd700;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .fact-display #fact-output {
-  font-family: "Audiowide", cursive;
-  color: #0f0; /* Retro green */
-  font-size: 1.2rem;
-  line-height: 1.5;
+  color: #0f0;
 }

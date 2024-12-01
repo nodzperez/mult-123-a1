@@ -1,116 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-
-<body>
-  <main class="container">
+  <body>
+    
     <header class="main-header">
       <h1>W3LC0M3 2 NUMB3R F4CT5</h1>
-      <p class="tagline">Your daily dose of quirky but informative number trivias!</p>
+      <p class="tagline">
+        Your daily dose of quirky but informative number trivias!
+      </p>
     </header>
-    
-    <!-- fact type indicator -->
-    <div class="fact-type-display">Selected Fact Type: <span id="fact-type">Trivia</span></div>
 
-    <!-- calculator screen -->
-    <input class="display" readonly type="text" dir="rtl" maxlength="8" placeholder="69420" />
+    <main class="container">
 
+      <div class="instructions-panel">
+        <div class="instructions">
+          <h2>Instructions</h2>
+          <ul>
+            <li>Enter a number using the calculator buttons.</li>
+            <li>
+              Select a fact type:
+              <ul>
+                <li><strong>Trivia</strong>: Fun facts about numbers.</li>
+                <li><strong>Math</strong>: Math-related facts.</li>
+                <li><strong>Date</strong>: Historical events or birthdays.</li>
+                <li>
+                  <strong>Year</strong>: Significant events for a given year.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Click <strong>Get Fact</strong> to fetch a fact based on your
+              number and type.
+            </li>
+            <li>Use <strong>Random</strong> for a surprise fact.</li>
+            <li>
+              Click <strong>C</strong> to clear the screen or
+              <strong>Del</strong> to delete one digit.
+            </li>
+          </ul>
+        </div>
+      </div>
 
-    <!-- calculator buttons -->
-    <div class="button-grid">
-
-      <!-- top row buttons -->
-      <div class="top-row">
-        <div class="button-body button-blue">
-          <button class="button-cap blue-cap-blue">C</button>
+      <div class="left-panel">
+        <!-- fact type indicator -->
+        <div class="fact-type-display">
+          Selected Fact Type: <span id="fact-type">Trivia</span>
         </div>
 
-        <div class="button-body button-blue wider-button">
-          <button class="button-cap blue-cap-blue wider-cap">Random</button>
-        </div>
+        <div class="calculator-case">
+          <!-- calculator screen -->
+          <input
+            class="display"
+            readonly
+            type="text"
+            dir="rtl"
+            maxlength="8"
+            placeholder="69420"
+          />
 
-        <div class="button-body button-blue">
-          <button class="button-cap blue-cap-blue">Date</button>
+          <!-- calculator buttons -->
+          <div class="button-grid">
+
+            <!-- top row -->
+            <div class="top-row">
+              <div class="button-body button-blue">
+                <button class="button-cap blue-cap-blue">C</button>
+              </div>
+              <div class="button-body button-blue wider-button">
+                <button class="button-cap blue-cap-blue wider-cap">
+                  Random
+                </button>
+              </div>
+              <div class="button-body button-blue">
+                <button class="button-cap blue-cap-blue">Date</button>
+              </div>
+            </div>
+
+            <!-- middle rows -->
+            <div class="middle-rows">
+              <div class="button-body">
+                <button class="button-cap">7</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">8</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">9</button>
+              </div>
+              <div class="button-body button-blue">
+                <button class="button-cap blue-cap-blue">Year</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">4</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">5</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">6</button>
+              </div>
+              <div class="button-body button-blue">
+                <button class="button-cap blue-cap-blue">Math</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">1</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">2</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">3</button>
+              </div>
+              <div class="button-body button-blue">
+                <button class="button-cap blue-cap-blue">Trivia</button>
+              </div>
+            </div>
+
+            <!-- bottom row -->
+            <div class="bottom-row">
+              <div class="button-body">
+                <button class="button-cap">Del</button>
+              </div>
+              <div class="button-body">
+                <button class="button-cap">0</button>
+              </div>
+              <div class="button-body wider-button">
+                <button class="button-cap wider-cap">Get Fact</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- middle row buttons -->
-      <div class="middle-rows">
-        <div class="button-body">
-          <button class="button-cap">7</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">8</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">9</button>
-        </div>
-
-        <div class="button-body button-blue">
-          <button class="button-cap blue-cap-blue">Year</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">4</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">5</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">6</button>
-        </div>
-
-        <div class="button-body button-blue">
-          <button class="button-cap blue-cap-blue">Math</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">1</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">2</button>
-        </div>
-
-        <div class="button-body">
-          <button class="button-cap">3</button>
-        </div>
-
-        <div class="button-body button-blue">
-          <button class="button-cap blue-cap-blue">Trivia</button>
-        </div>
+      <!-- fact display Section -->
+      <div class="right-panel">
+        <section class="fact-display">
+          <h2>Your Fact:</h2>
+          <p id="fact-output">Press "Get Fact" to reveal something fun!</p>
+        </section>
       </div>
-    
-    <div class="bottom-row">
-      <div class="button-body">
-        <button class="button-cap">Del</button>
-      </div>
-
-      <div class="button-body">
-        <button class="button-cap">0</button>
-      </div>
-
-      <div class="button-body wider-button">
-        <button class="button-cap wider-cap">Get Fact</button>
-    </div>
-  </div>
-
-      <!-- fact display section -->
-      <section class="fact-display">
-        <h2>Your Fact:</h2>
-        <p id="fact-output">Press "Get Fact" to reveal something fun!</p>
-      </section>
-  </main>
-</body>
-<script src="script.js"></script>
+    </main>
+  </body>
+  <script src="script.js"></script>
 </html>
