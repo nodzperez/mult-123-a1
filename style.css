@@ -1,4 +1,4 @@
-/* global styling */
+global styling
 :root {
   --button-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 0px 2px rgba(16, 22, 26, 0.2), 0 0px 1px rgba(16, 22, 26, 0.2);
 }
