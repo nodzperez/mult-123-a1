@@ -5,13 +5,13 @@ global styling
 
 * {
   font-family: "Audiowide", cursive;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
   background: #1a0014;
-  overflow: hidden;
 }
 
 .container {
@@ -140,6 +140,7 @@ body {
 .button-grid {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .top-row {
@@ -259,4 +260,87 @@ body {
 
 .fact-display #fact-output {
   color: #0f0;
+}
+
+/* mobile styling */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .calculator-case {
+    width: 100%;
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+   .button-cap {
+    width: 50px;
+    height: 50px;
+    font-size: small;
+  }
+
+  .display {
+    font-size: 1.5rem;
+    height: 50px;
+  }
+
+  .fact-display {
+    font-size: 1.2rem;
+  }
+
+  .wider-button {
+    width: 100%;
+  }
+
+  .wider-cap {
+    width: 100%;
+  }
+}
+
+/* tablet medium screens - landscape */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; 
+    padding: 15px;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .calculator-case {
+    width: 100%;
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button-body {
+    width: 60px;
+    height: 60px;
+  }
+
+  .display {
+    font-size: 2rem;
+    height: 60px;
+  }
+}
+
+
+/* desktop or large screen styling */
+@media only screen and (min-width: 1025px) {
+  body {
+    overflow: hidden;
+  }
 }
